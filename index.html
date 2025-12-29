@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulgad Majestic Hotel | Hospitality at its Peak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #1e3a8a;
+            --accent: #b45309;
+        }
+
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(30, 58, 138, 0.75), rgba(30, 58, 138, 0.75)), 
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .scroll-mt { scroll-margin-top: 80px; }
+
+        /* Ensure cards in a row are always the same height */
+        .equal-height-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex flex-col">
+                    <span class="text-blue-900 font-bold text-xl tracking-tight leading-none uppercase">Sulgad Majestic</span>
+                    <span class="text-amber-700 text-xs font-semibold tracking-widest uppercase">Hotel & Suites</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-700 hover:text-blue-900 font-medium">Home</a>
+                    <a href="#rooms" class="text-slate-700 hover:text-blue-900 font-medium">Rooms</a>
+                    <a href="#facilities" class="text-slate-700 hover:text-blue-900 font-medium">Facilities</a>
+                    <a href="#testimonials" class="text-slate-700 hover:text-blue-900 font-medium">Reviews</a>
+                    <a href="#contact" class="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition duration-300">Book Now</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-700 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-4 py-4 space-y-2 shadow-lg text-center">
+            <a href="#home" class="block py-2 text-slate-700 border-b">Home</a>
+            <a href="#rooms" class="block py-2 text-slate-700 border-b">Rooms</a>
+            <a href="#facilities" class="block py-2 text-slate-700 border-b">Facilities</a>
+            <a href="#testimonials" class="block py-2 text-slate-700 border-b">Reviews</a>
+            <a href="#contact" class="block py-2 text-slate-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center text-center hero-gradient text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl mb-6">Home away from home...</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light italic text-amber-200">"Hospitality at its peak"</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#rooms" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition">View Our Rates</a>
+                <a href="#contact" class="bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition hover:bg-slate-100">Contact Desk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-20 max-w-7xl mx-auto px-4 scroll-mt">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-blue-900 mb-4">Our Rates & Suites</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto italic">Quality accommodation at very affordable rates.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Room Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 equal-height-card">
+                <div class="h-64 bg-slate-200 shrink-0">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Classic Room">
+                </div>
+                <div class="p-8 flex flex-col grow">
+                    <h4 class="text-2xl font-bold text-blue-900">Classic Room</h4>
+                    <p class="text-slate-500 my-4 grow">Our entry-level comfort. Features A/C, Intercom, Flat Screen TV, and a refrigerator. Ideal for short stays and budget travelers.</p>
+                    <div class="text-3xl font-bold text-amber-700 mb-6">₦15,000</div>
+                    <a href="#contact" class="block text-center border-2 border-blue-900 text-blue-900 py-3 rounded-lg font-bold hover:bg-blue-900 hover:text-white transition">Reserve Now</a>
+                </div>
+            </div>
+            <!-- Room Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 equal-height-card">
+                <div class="h-64 bg-slate-200 shrink-0">
+                    <img src="https://images.unsplash.com/photo-1591088398332-8a77d399c843?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Executive Room">
+                </div>
+                <div class="p-8 flex flex-col grow">
+                    <h4 class="text-2xl font-bold text-blue-900">Executive Room</h4>
+                    <p class="text-slate-500 my-4 grow">Enhanced space and premium finishing. Perfect for business executives requiring extra comfort during their stay.</p>
+                    <div class="text-3xl font-bold text-amber-700 mb-6">₦20,000</div>
+                    <a href="#contact" class="block text-center border-2 border-blue-900 text-blue-900 py-3 rounded-lg font-bold hover:bg-blue-900 hover:text-white transition">Reserve Now</a>
+                </div>
+            </div>
+            <!-- Room Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-100 equal-height-card">
+                <div class="h-64 bg-slate-200 shrink-0">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Majestic Suite">
+                </div>
+                <div class="p-8 flex flex-col grow">
+                    <h4 class="text-2xl font-bold text-blue-900">Majestic Suite</h4>
+                    <p class="text-slate-500 my-4 grow">Luxury redefined. Features a spacious living area separated from the bedroom, high-end upholstery, and superior amenities.</p>
+                    <div class="text-3xl font-bold text-amber-700 mb-6">₦30,000</div>
+                    <a href="#contact" class="block text-center border-2 border-blue-900 text-blue-900 py-3 rounded-lg font-bold hover:bg-blue-900 hover:text-white transition">Reserve Now</a>
+                </div>
+            </div>
+            <!-- Room Card 4 -->
+            <div class="bg-blue-900 rounded-xl shadow-lg overflow-hidden text-white equal-height-card">
+                <div class="h-64 bg-slate-200 shrink-0">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Diplomatic Suite">
+                </div>
+                <div class="p-8 flex flex-col grow">
+                    <h4 class="text-2xl font-bold">Diplomatic Suite</h4>
+                    <p class="text-blue-100 my-4 grow">Our flagship suite for elite guests. Offers the highest level of privacy, luxury, and dedicated service features.</p>
+                    <div class="text-3xl font-bold text-amber-400 mb-6">₦50,000</div>
+                    <a href="#contact" class="block text-center bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-700 transition">Reserve Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-slate-100 scroll-mt">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">What Our Guests Say</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-amber-600 equal-height-card">
+                    <div class="flex text-amber-500 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 grow text-lg">"Good accommodation, comfortable environment, and pocket friendly. I really enjoyed my stay here."</p>
+                    <div class="font-bold text-blue-900">— SANI ABBA</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-amber-600 equal-height-card">
+                    <div class="flex text-amber-500 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 grow text-lg">"Perfect and pleasant environment for a business lodging and family stay. Their room rate is just superb and budget friendly. I recommend."</p>
+                    <div class="font-bold text-blue-900">— CHUKWUMA OKORO</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-amber-600 equal-height-card">
+                    <div class="flex text-amber-500 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 grow text-lg">"The best and most secured place to be at home away from home. I like their suites; it is really cool."</p>
+                    <div class="font-bold text-blue-900">— AHMED SANI</div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-l-8 border-amber-600 equal-height-card">
+                    <div class="flex text-amber-500 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6 grow text-lg">"Hospitality at its peak indeed. The staff were professional and the 24/7 power supply made my business trip very productive."</p>
+                    <div class="font-bold text-blue-900">— MRS. BELLO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-20 bg-blue-900 text-white scroll-mt">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Our Facilities</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-bolt text-3xl text-amber-400 mb-4"></i>
+                    <h5 class="font-bold">24/7 Power Supply</h5>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-shield-halved text-3xl text-amber-400 mb-4"></i>
+                    <h5 class="font-bold">Armed Security & CCTV</h5>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-person-swimming text-3xl text-amber-400 mb-4"></i>
+                    <h5 class="font-bold">Swimming Pool</h5>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-dumbbell text-3xl text-amber-400 mb-4"></i>
+                    <h5 class="font-bold">Modern Gym</h5>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-utensils text-3xl text-amber-400 mb-4"></i>
+                    <h5 class="font-bold">Restaurant & Bar</h5>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-shirt text-3xl text-amber-400 mb-4"></i>
+                    <h5 class="font-bold">Laundry Services</h5>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-users-rectangle text-3xl text-amber-400 mb-4"></i>
+                    <h5 class="font-bold">Multi-purpose Hall</h5>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-tv text-3xl text-amber-400 mb-4"></i>
+                    <h5 class="font-bold">Satellite TV & Intercom</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 scroll-mt">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold text-blue-900 mb-8">Get In Touch</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-amber-700 flex items-center">
+                            <i class="fa-solid fa-location-dot mr-2"></i> MAIN HOTEL
+                        </h4>
+                        <p class="text-slate-600">Plot 5051, Along Gado Nasko Way, By 2nd Gate, Phase 4, Kubwa, Abuja.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-amber-700 flex items-center">
+                            <i class="fa-solid fa-hotel mr-2"></i> ANNEX
+                        </h4>
+                        <p class="text-slate-600">No. 1, Sulgad Close, Behind NNPC Filling Station, Phase 4, Kubwa, Abuja.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-amber-700 flex items-center">
+                            <i class="fa-solid fa-phone mr-2"></i> CALL US 24/7
+                        </h4>
+                        <p class="text-slate-600">08035889725, 08053224017, 09072221221</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-amber-700 flex items-center">
+                            <i class="fa-solid fa-envelope mr-2"></i> EMAIL
+                        </h4>
+                        <p class="text-slate-600">sulgadmajestichotel@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                <form id="whatsappForm" class="space-y-4">
+                    <h3 class="text-2xl font-bold mb-4">Quick Booking Inquiry</h3>
+                    <input type="text" id="name" placeholder="Your Full Name" class="w-full p-3 border rounded focus:ring-2 focus:ring-blue-900 outline-none" required>
+                    <input type="tel" id="phone" placeholder="WhatsApp Number" class="w-full p-3 border rounded focus:ring-2 focus:ring-blue-900 outline-none" required>
+                    <select id="room" class="w-full p-3 border rounded focus:ring-2 focus:ring-blue-900 outline-none" required>
+                        <option value="" disabled selected>Select Room Category</option>
+                        <option>Classic Room (₦15,000)</option>
+                        <option>Executive Room (₦20,000)</option>
+                        <option>Majestic Suite (₦30,000)</option>
+                        <option>Diplomatic Suite (₦50,000)</option>
+                        <option>Annex Standard (₦10,000)</option>
+                        <option>Annex Majestic (₦12,000)</option>
+                    </select>
+                    <textarea id="message" placeholder="Special requests or date of arrival..." class="w-full p-3 border rounded focus:ring-2 focus:ring-blue-900 outline-none h-24"></textarea>
+                    
+                    <button type="button" onclick="sendToWhatsApp()" class="w-full bg-[#25D366] text-white py-4 rounded font-bold hover:bg-[#128C7E] transition uppercase tracking-widest flex items-center justify-center shadow-lg">
+                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Send to WhatsApp
+                    </button>
+                    <p class="text-center text-xs text-slate-500 mt-2">Connecting to: 08157451278</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-white text-2xl font-bold mb-4 tracking-widest">SULGAD MAJESTIC HOTEL</h2>
+            <p class="mb-8 italic">"Home away from home..."</p>
+            <div class="border-t border-slate-800 pt-8 text-sm">
+                &copy; 2025 Sulgad Majestic Hotel & Suites. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        document.querySelectorAll('#mobile-menu a').forEach(l => l.addEventListener('click', () => menu.classList.add('hidden')));
+
+        function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const room = document.getElementById('room').value;
+            const message = document.getElementById('message').value;
+            
+            if(!name || !phone || !room) {
+                alert("Please fill in your name, phone, and select a room.");
+                return;
+            }
+
+            // Updated business WhatsApp number
+            const businessNumber = "2348157451278"; 
+            
+            const text = `*Booking Inquiry - Sulgad Majestic Hotel*%0A%0A` +
+                         `*Guest Name:* ${name}%0A` +
+                         `*Phone:* ${phone}%0A` +
+                         `*Preferred Room:* ${room}%0A` +
+                         `*Note:* ${message || 'No additional message.'}`;
+
+            // Open WhatsApp
+            window.open(`https://wa.me/${businessNumber}?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
